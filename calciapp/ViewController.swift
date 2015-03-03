@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         self.display.text = String(result)
     }
     
+    
+    @IBAction func updateInput(sender: AnyObject) {
+        input = sender.titleLabel?.text.toInt()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
