@@ -10,6 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var display: UILabel!
+    var result = 0
+    var input = 0
+    var operation = "+"
+    
+    @IBAction func calculate(sender: AnyObject) {
+        switch operation {
+        case "+":
+            result = result + input
+        case "+":
+            result = result - input
+        case "+":
+            result = result * input
+        default:
+            result = 0
+            input = 0
+            operation = "+"
+        }
+        
+        self.display.text = String(result)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
